@@ -48,6 +48,7 @@ user_path = script_path.replace('/strategies', '')
 os.chdir(user_path); sys.path.append(user_path)
 ft_bot = user_path.replace('/user_data', '').split('/')[-1]
 
+
 # Memcache settings, they go at the top of your strategy class.
 use_memcache = True
 num_cached_candles = 50
