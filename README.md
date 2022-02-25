@@ -61,7 +61,7 @@ except Exception as e:
     print(e)
     print('Memcache has failed.')
 ```
-NOTE: If you are running hyperopt, be sure that use_memcache = False.
+NOTE: If you are running hyperopt, be sure that `use_memcache = False`.
 
 6.  To use the NGROK features, install NGROK and add these lines to your `~/.ngrok2/ngrok.yml` file after applying your authtoken.
 ```
