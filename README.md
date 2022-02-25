@@ -55,7 +55,6 @@ num_cached_candles = 50
 
 # add this to end of 'populate_indicators'
 try:
-    pair = pair.replace('/', '_')
     if self.use_memcache:
         client = RetryingClient(
             base_client,
@@ -64,6 +63,7 @@ try:
             retry_for=[MemcacheUnexpectedCloseError]
         )
         num_entries = self.num_cached_candles
+        pair = metadata['pair'].replace('/', '_')
         datetime_entries = [str(entry) for entry in dataframe[f"datetime"].iloc[-num_entries:]]
         client.set(f'{ft_bot}_{pair}_date', str(datetime_entries))
         client.set(f'{ft_bot}_{pair}_open', str(list(dataframe[f"open"].iloc[-num_entries:])))
