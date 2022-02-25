@@ -29,7 +29,7 @@ Besides the commands below, this bot can also plot live when orders are placed o
 2. Add in your configurations into the .json.
 3. When working with Telegram, be sure to create a group for your Freqtrade bot.  This group will contain you, your Freqtrade bot, and the controller bot.  Use the same group chat id for both bots.  Make sure that the bots are set to "admin" privileges, that you are set to "anonymous", and that history is set to be logged.
 4.  Use the `rbn_controller_launcher.zsh` to run the controller on a screen named`rbn_controller`.
-5.  You will need to also modify your strategy file.  If you are running hyperopt, be sure that use_memcache = False.
+5.  You will need to also modify your strategy file.
 ```
 # add this to import
 from pymemcache.client import base
@@ -56,6 +56,8 @@ except Exception as e:
     print(e)
     print('Memcache has failed.')
 ```
+NOTE: If you are running hyperopt, be sure that use_memcache = False.
+
 6.  To use the NGROK features, add these lines to your `~/.ngrok2/ngrok.yml` file after applying your authtoken.
 ```
 authtoken: XXXXXXXXXXXXXXXX
