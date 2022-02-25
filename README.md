@@ -42,6 +42,11 @@ from pymemcache.client.retrying import RetryingClient
 from pymemcache.exceptions import MemcacheUnexpectedCloseError
 base_client = Client(("localhost", 11211))
 
+import os, sys
+script_path = os.path.dirname(os.path.abspath( __file__ ))
+user_path = script_path.replace('/strategies', '')
+os.chdir(user_path); sys.path.append(user_path)
+ft_bot = user_path.replace('/user_data', '').split('/')[-1]
 
 # Memcache settings, they go at the top of your strategy class.
 use_memcache = True
@@ -58,15 +63,16 @@ try:
             retry_delay=0.01,
             retry_for=[MemcacheUnexpectedCloseError]
         )
-        datetime_entries = [str(entry) for entry in dataframe[f"datetime"].iloc[-self.num_cached_candles:]]
-        client.set(ft_bot+'_'+pair+'_date', str(datetime_entries))
-        client.set(ft_bot+'_'+pair+'_open', str(list(dataframe[f"open"].iloc[-self.num_cached_candles:])))
-        client.set(ft_bot+'_'+pair+'_high', str(list(dataframe[f"high"].iloc[-self.num_cached_candles:])))
-        client.set(ft_bot+'_'+pair+'_low',  str(list(dataframe[f"low"].iloc[-self.num_cached_candles:])))
-        client.set(ft_bot+'_'+pair+'_close', str(list(dataframe[f"close"].iloc[-self.num_cached_candles:])))
-        client.set(ft_bot+'_'+pair+'_volume', str(list(dataframe[f"volume"].iloc[-self.num_cached_candles:])))
-        client.set(ft_bot+'_'+pair+'_indicator_1', str(list(dataframe[f"indicator_1"].iloc[-self.num_cached_candles:])))
-        client.set(ft_bot+'_'+pair+'_indicator_2', str(list(dataframe[f"indicator_2"].iloc[-self.num_cached_candles:])))
+        num_entries = self.num_cached_candles
+        datetime_entries = [str(entry) for entry in dataframe[f"datetime"].iloc[-num_entries:]]
+        client.set(f'{ft_bot}_{pair}_date', str(datetime_entries))
+        client.set(f'{ft_bot}_{pair}_open', str(list(dataframe[f"open"].iloc[-num_entries:])))
+        client.set(f'{ft_bot}_{pair}_high', str(list(dataframe[f"high"].iloc[-num_entries:])))
+        client.set(f'{ft_bot}_{pair}_low',  str(list(dataframe[f"low"].iloc[-num_entries:])))
+        client.set(f'{ft_bot}_{pair}_close', str(list(dataframe[f"close"].iloc[-num_entries:])))
+        client.set(f'{ft_bot}_{pair}_volume', str(list(dataframe[f"volume"].iloc[-num_entries:])))
+        client.set(f'{ft_bot}_{pair}_indicator_1', str(list(dataframe[f"indicator_1"].iloc[-num_entries:])))
+        client.set(f'{ft_bot}_{pair}_indicator_2', str(list(dataframe[f"indicator_2"].iloc[-num_entries:])))
 except Exception as e:
     print(e)
     print('Memcache has failed.')
