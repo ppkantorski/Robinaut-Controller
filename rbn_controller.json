@@ -1,0 +1,16 @@
+{
+    "bot_names": ["ft_bot_1"],
+    "plot": {
+        "timezone": "America/Los_Angeles",
+        "ft_bot_1": {
+            "indicators": ["ema"],
+            "indicator_colors": ["blue"]
+        }
+    },
+    "telegram": {
+        "chat_id": "",
+        "token": "",
+        "admin": "",
+        "user_list": [""]
+    }
+}
