@@ -73,6 +73,7 @@ try:
         client.set(f'{ft_bot}_{pair}_volume', str(list(dataframe[f"volume"].iloc[-num_entries:])))
         client.set(f'{ft_bot}_{pair}_indicator_1', str(list(dataframe[f"indicator_1"].iloc[-num_entries:])))
         client.set(f'{ft_bot}_{pair}_indicator_2', str(list(dataframe[f"indicator_2"].iloc[-num_entries:])))
+        ...
 except Exception as e:
     print(e)
     print('Memcache has failed.')
