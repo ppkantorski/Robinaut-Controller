@@ -1,4 +1,4 @@
-# Robinaut Controller v0.1 Beta
+# Robinaut Controller v0.1
 The Freqtrade Telegram Helper Bot
 
 ![alt-text](https://i.imgur.com/s88cypn.png)
