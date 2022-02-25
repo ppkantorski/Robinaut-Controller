@@ -36,18 +36,28 @@ NOTE: Use NGROK at your own risk, however I personally think that it is useful f
 4.  Use the `rbn_controller_launcher.zsh` to run the controller on a screen named`rbn_controller`.
 5.  You will need to also modify your strategy file.
 ```
-# add this to import
-from pymemcache.client import base
+# add this to the top of the strategy
+from pymemcache.client.base import Client
+from pymemcache.client.retrying import RetryingClient
+from pymemcache.exceptions import MemcacheUnexpectedCloseError
+base_client = Client(("localhost", 11211))
+
 
 # Memcache settings, they go at the top of your strategy class.
 use_memcache = True
 num_cached_candles = 50
 
+
 # add this to end of 'populate_indicators'
 try:
     pair = pair.replace('/', '_')
     if self.use_memcache:
-        client = base.Client(('localhost', 11211))
+        client = RetryingClient(
+            base_client,
+            attempts=3,
+            retry_delay=0.01,
+            retry_for=[MemcacheUnexpectedCloseError]
+        )
         datetime_entries = [str(entry) for entry in dataframe[f"datetime"].iloc[-self.num_cached_candles:]]
         client.set(ft_bot+'_'+pair+'_date', str(datetime_entries))
         client.set(ft_bot+'_'+pair+'_open', str(list(dataframe[f"open"].iloc[-self.num_cached_candles:])))
