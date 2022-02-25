@@ -27,7 +27,7 @@ Besides the commands below, this bot can also plot live when orders are placed o
 ```
 2. Add in your configurations into the .json.
 3. When working with Telegram, be sure to create a group for your Freqtrade bot.  This group will contain you, your Freqtrade bot, and the controller bot.  Use the same group chat id for both bots.  Make sure that the bots are set to "admin" privileges, that you are set to "anonymous", and that history is set to be logged.
-4.  Use the .zsh launcher file to run the controller on a screen named 'rbn_controller'.
+4.  Use the rbn_controller_launcher.zsh to run the controller on a screen named 'rbn_controller'.
 5.  You will need to add this condition to 'populate_indicators' on your strategy.
 ```
 # add this to import
@@ -55,7 +55,7 @@ except Exception as e:
     print(e)
     print('Memcache has failed.')
 ```
-6.  To use the 'ngrok' features, add these lines to your ngrok.yml (~/.ngrok2/ngrok.yml) file after adding your authtoken.
+6.  To use the 'ngrok' features, add these lines to your ngrok.yml (~/.ngrok2/ngrok.yml) file after adding your authtoken.  You can use ngrok_launcher.zsh to run ngrok on a screen named 'ngrok'.
 ```
 authtoken: XXXXXXXXXXXXXXXX
 tunnels:
