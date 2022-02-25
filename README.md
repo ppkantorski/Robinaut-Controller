@@ -8,8 +8,6 @@ The Freqtrade Telegram Helper Bot
 # Features
 The goal of this bot is to add a lot more features to control and manage multiple Freqtrade instances as well as view live data.  (Stuff that Freqtrade's Telegram bot currently cannot do and may never do.)  I like to use this bot personally to extend my ability to control multiple bots running on a server to get a general picture of all the pairs without having to go into FreqUI or to pull up FreqUI's dynamic ngrok HTTPS web urls.
 
-NOTE: Use NGROK at your own risk, however I personally think that it is useful for Freqtrade.  I believe that wrapping the url in NGROK's HTTPS tunnels is safer when viewing data from an external server, but I was told before by the FreqUI developer that this method of tunneling FreqUI is not recommended (but neither is accessing FreqUI externally in general).  It is useful for me.  I will configure it later so that you can refresh NGROK's random tunnels URLs or even set it to automatically reset each day if you are paranoid.
-
 Besides the commands below, this bot can also plot live when orders are placed on your Freqtrade bots.
 ```
 /help_control - default help page
@@ -18,6 +16,9 @@ Besides the commands below, this bot can also plot live when orders are placed o
 /public_url - obtain local NGROK tunnels for bots
 /sync_configs - (something i'm playing with to sync data.  may not be useful for you right now.)
 ```
+
+NOTE: Use NGROK at your own risk, however I personally think that it is useful for Freqtrade.  I believe that wrapping the url in NGROK's HTTPS tunnels is safer when viewing data from an external server, but I was told before by the FreqUI developer that this method of tunneling FreqUI is not recommended (but neither is accessing FreqUI externally in general).  It is useful for me.  I will configure it later so that you can refresh NGROK's random tunnels URLs or even set it to automatically reset each day if you are paranoid.
+
 # How to use
 1.  Download and install 'memcached'.  Then use the command `memcached -d` to launch the memcached daemon.
 1.  Place the files in the directory above the folder containing `user_data`.  Name the folder according to the bot name.
