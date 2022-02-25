@@ -3,13 +3,13 @@ Freqtrade Telegram Helper Bot
 
 # Features
 Besides the commands below, this bot can also plot live when orders are placed on your bot.
-
+```
 /help_control - default help page
 /plot - plot pairs for specified bot
 /indicators - obtain indicator values for desired pairs (still beta, needs work)
 /public_url - obtain local NGROK tunnels for bots
 /sync_configs - (something i'm playing with to sync data.  may not be useful for you right now.)
-
+```
 # How to use
 
 1.  Place the files in the directory above the folder containing 'user_data'.  Name the folder according to the bot name.
