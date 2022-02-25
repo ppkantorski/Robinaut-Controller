@@ -6,6 +6,8 @@ The Freqtrade Telegram Helper Bot
 ![alt-text-1](https://i.imgur.com/iEmtc83.png) ![alt-text-2](https://i.imgur.com/8Rs99NX.png)
 
 # Features
+The goal of this bot is to add a lot more features to control and manage multiple instances as well as view live data.  Stuff that Freqtrade's Telegram bot currently cannot do.
+
 Besides the commands below, this bot can also plot live when orders are placed on your bot.
 ```
 /help_control - default help page
