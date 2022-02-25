@@ -55,3 +55,17 @@ except Exception as e:
     print(e)
     print('Memcache has failed.')
 ```
+6.  To use the 'ngrok' features, add these lines to your ngrok.yml file
+```
+authtoken: XXXXXXXXXXXXXXXX
+tunnels:
+  ft_bot_1:
+    addr: <FREQ_UI_PORT>
+    proto: http
+    bind_tls: true
+  ft_bot_2:
+    addr: <FREQ_UI_PORT>
+    proto: http
+    bind_tls: true
+  ...
+```
