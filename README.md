@@ -38,6 +38,7 @@ num_cached_candles = 50
 
 # add this to end of 'populate_indicators'
 try:
+    pair = pair.replace('/', '_')
     if self.use_memcache:
         client = base.Client(('localhost', 11211))
         datetime_entries = [str(entry) for entry in dataframe[f"datetime"].iloc[-self.num_cached_candles:]]
