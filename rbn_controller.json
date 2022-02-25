@@ -1,8 +1,12 @@
 {
-    "bot_names": ["ft_bot_1"],
+    "bot_names": ["ft_bot_1", "ft_bot_2"],
     "plot": {
         "timezone": "America/Los_Angeles",
         "ft_bot_1": {
+            "indicators": ["indicator_1", "indicator_2"],
+            "indicator_colors": ["blue", "red"]
+        },
+        "ft_bot_2": {
             "indicators": ["indicator_1", "indicator_2"],
             "indicator_colors": ["blue", "red"]
         }
