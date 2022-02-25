@@ -20,7 +20,7 @@ Besides the commands below, this bot can also plot live when orders are placed o
 NOTE: Use NGROK at your own risk, however I personally think that it is useful for Freqtrade.  I believe that wrapping the url in NGROK's HTTPS tunnels is safer when viewing data from an external server, but I was told before by the FreqUI developer that this method of tunneling FreqUI is not recommended (but neither is accessing FreqUI externally in general).  It is useful for me.  I will configure it later so that you can refresh NGROK's random tunnels URLs or even set it to automatically reset each day if you are paranoid.
 
 # How to use
-1.  Download and install 'memcached'.  Then use the command `memcached -d` to launch the memcached daemon.
+1.  Download and install `memcached` as well as `pymemcache`.  Then use the command `memcached -d` to launch the memcached daemon.
 1.  Place the files in the directory above the folder containing `user_data`.  Name the folder according to the bot name.
 ```
 /ft_bots/ft_bot_1/user_data
@@ -63,7 +63,7 @@ except Exception as e:
 ```
 NOTE: If you are running hyperopt, be sure that use_memcache = False.
 
-6.  To use the NGROK features, add these lines to your `~/.ngrok2/ngrok.yml` file after applying your authtoken.
+6.  To use the NGROK features, install NGROK and add these lines to your `~/.ngrok2/ngrok.yml` file after applying your authtoken.
 ```
 authtoken: XXXXXXXXXXXXXXXX
 tunnels:
