@@ -33,7 +33,7 @@ NOTE: Use NGROK at your own risk, however I personally think that it is useful f
 ```
 2. Add in your configurations into the .json.
 3. When working with Telegram, be sure to create a group for your Freqtrade bot.  This group will contain you, your Freqtrade bot, and the controller bot.  Use the same group chat id for both bots.  Make sure that the bots are set to "admin" privileges, that you are set to "anonymous", and that history is set to be logged.
-4.  Use the `rbn_controller_launcher.zsh` to run the controller on a screen named`rbn_controller`.
+4.  Use the `rbn_controller_launcher.zsh` to run the controller on a background screen named `rbn_controller`.
 5.  You will need to also modify your strategy file.
 ```
 # add this to the top of the strategy
