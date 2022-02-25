@@ -21,7 +21,7 @@ NOTE: Use NGROK at your own risk, however I personally think that it is useful f
 
 # How to use
 1.  Download and install `memcached` as well as `pymemcache`.  Then use the command `memcached -d` to launch the memcached daemon.
-1.  Place the files in the directory above the folder containing `user_data`.  Name the folder according to the bot name.
+2.  Place the files in the directory above the folder containing `user_data`.  Name the folder according to the bot name.
 ```
 /ft_bots/ft_bot_1/user_data
 /ft_bots/ft_bot_2/user_data
@@ -32,11 +32,13 @@ NOTE: Use NGROK at your own risk, however I personally think that it is useful f
 /ft_bots/ngrok_launcher.zsh
 /ft_bots/Helvetica.ttf
 ```
+
 NOTE: You will need to find and download `Helvetica.ttf` yourself.
-2. Add in your configurations into the .json.
-3. When working with Telegram, be sure to create a group for your Freqtrade bot.  This group will contain you, your Freqtrade bot, and the controller bot.  Use the same group chat id for both bots.  Make sure that the bots are set to "admin" privileges, that you are set to "anonymous", and that history is set to be logged.
-4.  Use the `rbn_controller_launcher.zsh` to run the controller on a background screen named `rbn_controller`.
-5.  You will need to also modify your strategy file.
+
+3. Add in your configurations into the `rbn_controller.json`.
+4. When working with Telegram, be sure to create a group for your Freqtrade bot.  This group will contain you, your Freqtrade bot, and the controller bot.  Use the same group chat id for both bots.  Make sure that the bots are set to "admin" privileges, that you are set to "anonymous", and that history is set to be logged.
+5.  Use the `rbn_controller_launcher.zsh` to run the controller on a background screen named `rbn_controller`.
+6.  You will need to also modify your strategy file.
 ```
 # add this to the top of the strategy
 from pymemcache.client.base import Client
@@ -84,7 +86,7 @@ except Exception as e:
 ```
 NOTE: If you are running hyperopt, be sure that `use_memcache = False`.
 
-6.  To use the NGROK features, install NGROK and add these lines to your `~/.ngrok2/ngrok.yml` file after applying your authtoken.
+7.  To use the NGROK features, install NGROK and add these lines to your `~/.ngrok2/ngrok.yml` file after applying your authtoken.
 ```
 authtoken: XXXXXXXXXXXXXXXX
 tunnels:
