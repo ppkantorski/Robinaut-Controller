@@ -8,7 +8,7 @@ The Freqtrade Telegram Helper Bot
 # Features
 The goal of this bot is to add a lot more features to control and manage multiple instances as well as view live data.  Stuff that Freqtrade's Telegram bot currently cannot do and may never do.  I like to use this bot personally to extend my ability to control multiple bots running on a server.
 
-Besides the commands below, this bot can also plot live when orders are placed on your bot.
+Besides the commands below, this bot can also plot live when orders are placed on your Freqtrade bots.
 ```
 /help_control - default help page
 /plot - plot pairs for specified bot
