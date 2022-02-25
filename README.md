@@ -55,7 +55,7 @@ except Exception as e:
     print(e)
     print('Memcache has failed.')
 ```
-6.  To use the 'ngrok' features, add these lines to your ngrok.yml (~/.ngrok2/ngrok.yml) file after adding your authtoken.  You can use ngrok_launcher.zsh to run ngrok on a screen named 'ngrok'.
+6.  To use the 'ngrok' features, add these lines to your ngrok.yml (~/.ngrok2/ngrok.yml) file after adding your auth
 ```
 authtoken: XXXXXXXXXXXXXXXX
 tunnels:
@@ -69,3 +69,4 @@ tunnels:
     bind_tls: true
   ...
 ```
+You can use ngrok_launcher.zsh to run ngrok on a screen named 'ngrok'.
