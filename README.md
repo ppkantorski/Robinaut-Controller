@@ -55,7 +55,7 @@ except Exception as e:
     print(e)
     print('Memcache has failed.')
 ```
-6.  To use the 'ngrok' features, add these lines to your ngrok.yml file
+6.  To use the 'ngrok' features, add these lines to your ngrok.yml (~/.ngrok2/ngrok.yml) file after adding your authtoken.
 ```
 authtoken: XXXXXXXXXXXXXXXX
 tunnels:
