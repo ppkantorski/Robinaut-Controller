@@ -1,4 +1,4 @@
-#!/usr/bin/env python3.
+#!/usr/bin/env python3
 import telegram#, emoji
 from telegram.ext.updater import Updater
 from telegram.update import Update
