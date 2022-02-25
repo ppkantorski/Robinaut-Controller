@@ -16,7 +16,7 @@ Besides the commands below, this bot can also plot live when orders are placed o
 ```
 # How to use
 1.  Download and install 'memcached'.  Then use the command `memcached -d` to launch the memcached daemon.
-1.  Place the files in the directory above the folder containing 'user_data'.  Name the folder according to the bot name.
+1.  Place the files in the directory above the folder containing `user_data`.  Name the folder according to the bot name.
 ```
 /ft_bots/ft_bot_1/user_data
 /ft_bots/ft_bot_2/user_data
