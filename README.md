@@ -65,7 +65,8 @@ try:
         )
         num_entries = self.num_cached_candles
         pair = metadata['pair'].replace('/', '_')
-        datetime_entries = [str(entry) for entry in dataframe[f"datetime"].iloc[-num_entries:]]
+        datetime_df = pd.to_datetime(dataframe['date']).dt.tz_localize(None)
+        datetime_entries = [str(entry) for entry in datetime_df.iloc[-num_entries:]]
         client.set(f'{ft_bot}_{pair}_date', str(datetime_entries))
         client.set(f'{ft_bot}_{pair}_open', str(list(dataframe[f"open"].iloc[-num_entries:])))
         client.set(f'{ft_bot}_{pair}_high', str(list(dataframe[f"high"].iloc[-num_entries:])))
