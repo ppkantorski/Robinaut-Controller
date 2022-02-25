@@ -96,4 +96,4 @@ tunnels:
     bind_tls: true
   ...
 ```
-After, you can use `ngrok_launcher.zsh` to run ngrok on a screen named `ngrok`.
+After, you can use `ngrok_launcher.zsh` to run ngrok on a background screen named `ngrok`.
