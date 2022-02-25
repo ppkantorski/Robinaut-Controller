@@ -1,7 +1,8 @@
-# Robinaut-Controller
+# Robinaut-Controller v0.1
 The Freqtrade Telegram Helper Bot
 
 ![alt text](https://i.imgur.com/8Rs99NX.png)
+![alt text](https://i.imgur.com/iEmtc83.png)
 
 # Features
 Besides the commands below, this bot can also plot live when orders are placed on your bot.
