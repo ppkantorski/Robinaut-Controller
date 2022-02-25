@@ -3,7 +3,7 @@ The Freqtrade Telegram Helper Bot
 
 ![alt-text](https://i.imgur.com/s88cypn.png)
 
-![alt-text-1](https://i.imgur.com/iEmtc83.png) ![alt-text-2](https://i.imgur.com/8Rs99NX.png)
+![alt-text-2](https://i.imgur.com/8Rs99NX.png)|![alt-text-1](https://i.imgur.com/iEmtc83.png)
 
 # Features
 The goal of this bot is to add a lot more features to control and manage multiple Freqtrade instances as well as view live data.  (Stuff that Freqtrade's Telegram bot currently cannot do and may never do.)  I like to use this bot personally to extend my ability to control multiple bots running on a server as well as to get a general picture of all the pairs without having to go into FreqUI, or to pull up FreqUI's dynamic NGROK HTTPS web urls.
