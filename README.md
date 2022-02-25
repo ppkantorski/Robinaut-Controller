@@ -2,6 +2,7 @@
 The Freqtrade Telegram Helper Bot
 
 ![alt-text](https://i.imgur.com/s88cypn.png)
+
 ![alt-text-1](https://i.imgur.com/iEmtc83.png) ![alt-text-2](https://i.imgur.com/8Rs99NX.png)
 
 # Features
