@@ -17,7 +17,7 @@ Besides the commands below, this bot can also plot live when orders are placed o
 /sync_configs - (something i'm playing with to sync data.  may not be useful for you right now.)
 ```
 
-NOTE: Use NGROK at your own risk, however I personally think that it is useful for Freqtrade.  I believe that wrapping the url in NGROK's HTTPS tunnels is safer when viewing data from an external server, but I was told before by the FreqUI developer that this method of tunneling FreqUI is not recommended (but neither is accessing FreqUI externally in general).  It is useful for me.  I will configure it later so that you can refresh NGROK's random tunnels URLs or even set it to automatically reset each day if you are paranoid.
+NOTE: Use NGROK at your own risk, however I personally think that it is useful for Freqtrade.  I believe that wrapping the url in NGROK's HTTPS tunnels is safer when viewing data from an external server, but I was told before by the FreqUI developer that this method of tunneling FreqUI is not recommended (but neither is accessing FreqUI externally in general).  It is useful for me.  I will configure it later so that you can refresh NGROK's random tunnels URLs or even set it to automatically reset each day for those who are paranoid.
 
 # How to use
 1.  Download and install `memcached` as well as `pymemcache` and the other dependencies within `rbn_controller.py`.  Then use the command `memcached -d` to launch the memcached daemon.
